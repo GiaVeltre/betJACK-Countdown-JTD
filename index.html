@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>betJACK Countdown</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="background">
+    <div class="container">
+       <div><img class="logo-banner" src="https://cdn.shopify.com/s/files/1/0576/6424/1717/files/betJACK_sportsbook_logo_white-white.png?v=1666974079" alt="logo"></div>
+       
+       <div class="wrapper">
+        <h1 class="title">COMING <span>SOON!</span></h1>
+        <article class="img-info">
+            
+            <div class="launch-time">
+    
+            <div>
+                <p id="days">00</p>
+                <h6><span>DAYS</span></h6>
+            </div>
+    
+            <div>
+                <p id="hours">00</p>
+                <h6><span>HOURS</span></h6>
+            </div>
+    
+            <div>
+                <p id="minutes">00</p>
+                <h6><span>MINUTES</span></h6>
+            </div>
+    
+            <div>
+                <p id="seconds">00</p>
+                <h6><span>SECONDS</span></h6>
+            </div>
+    
+            </div>
+        </article>
+            <section class="gambling-snipe">
+                <p>GAMBLING PROBLEM? CALL 1-800-GAMBLER OR VISIT GAMBLINGHELPOHIO.ORG</p>
+            </section>
+        <script>
+            var endTime = new Date(2023, 0, 1).getTime();
+            setInterval(function()
+            {
+                var startTime = new Date().getTime();
+                var duration = (endTime - startTime) / 1000;
+    
+                var days = Math.floor(duration / 86400);
+                var hours = Math.floor((duration % 86400) / 3600);
+                var minutes = Math.floor((duration % 3600) / 60);
+                var seconds = Math.floor(duration % 60);
+    
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+            }, 1000);
+        </script>
+    </div>
+    </body>
+    </html>
+    
